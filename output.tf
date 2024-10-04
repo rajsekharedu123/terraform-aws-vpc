@@ -3,17 +3,17 @@ output  "vpc_id" {
 }
 
 output "public_subnet_ids"{
-  value = aws_subnet.public[*].id
+  value = aws_subnet.pub_sub[*].id
 }
 
 output "private_subnet_ids"{
-  value = aws_subnet.private[*].id
+  value = aws_subnet.pvt_sub[*].id
 }
 
 output "database_subnet_ids"{
-  value = aws_subnet.database[*].id
+  value = aws_subnet.dbase[*].id
 }
 
 output "database_subnet_group_name"{
-  value = aws_db_subnet_group.default.name
+  value = aws_db_subnet_group.dbsubgrp.name
 }
