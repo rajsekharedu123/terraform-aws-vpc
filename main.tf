@@ -17,7 +17,7 @@ resource "aws_subnet" "pub_sub" {
   cidr_block = var.public_sub_cidr[count.index]
   #availability_zone = zonename
   availability_zone = local.az_list[count.index]
-
+  map_public_ip_on_launch = true
 
 tags = merge(
         var.common_tags,
